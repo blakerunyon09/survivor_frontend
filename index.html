@@ -10,17 +10,28 @@
   <script defer src="./src/index.js"></script>
   <title>Survivor Fantasy Island</title>
 </head>
-<body class="bg-white-light overflow-x-hidden relative h-full w-full">
-  <header id="nav-items" class="animate__animated animate__slideInDown z-20 z-10 p-10 flex absolute justify-between w-screen">
-    <!-- <i href="/" class="fab fa-accusoft"></i> -->
-    <img id="logo" src="/images/Survivor Fantasy Island Lock Ups_2.png" class="h-14 sm:h-20 2xl:h-24" />
-    <i id="nav_button" class="fas fa-bars text-green-dark md:text-orange-light text-3xl md:text-4xl"></i>
+<body class="bg-white-dark overflow-x-hidden relative h-full w-full">
+  <header class="h-0">
+    <div id="home-nav" class="animate__animated animate__slideInDown z-20 z-10 p-10 flex absolute justify-between w-screen">
+      <!-- <i href="/" class="fab fa-accusoft"></i> -->
+      <a href="/"><img id="logo" src="/images/Survivor Fantasy Island Lock Ups_2.png" class="h-14 sm:h-20 2xl:h-24" /></a>
+      <i id="nav_button" class="fas fa-bars text-green-dark md:text-orange-light text-3xl md:text-4xl"></i>
+    </div>
+    <nav id="flyout-nav" class="hidden-right z-10 fixed md:relative flex top-0 w-full md:w-1/2 ml-auto h-screen bg-white-dark items-center justify-center">
+      <ul>
+        <li class="p-8 font-bold text-3xl text-orange-dark hidden md:block"><a href="/"><a href="/">Home</a></li>
+        <li class="p-8 font-bold text-3xl text-orange-dark"><a href="/"><a href="/">Play Survivor</a></li>
+        <li class="p-8 font-bold text-3xl text-orange-dark"><a href="/survivors.html">Contestants</a></li>
+        <li class="p-8 font-bold text-3xl text-orange-dark"><a href="/">Profile</a></li>
+        <li class="p-8 font-bold text-3xl text-orange-dark"><a href="/">Login</a></li>
+      </ul>
+    </nav>
   </header>
   <main>
     <section class="flex flex-col md:flex-row">
       <section class="left-hero-overlay flex md:absolute h-90 md:w-1/2 md:h-2/3 bg-orange-light items-end animate__animated animate__slideInLeft">
         <div id="hero-title" class="animate__animated animate__slideInLeft">
-          <h1 class="left-hero-title p-4 max-w-md text-2xl lg:text-4xl 2xl:text-7xl font-bold text-white-light">THE TRIBE HAS SPOKEN.</h1>
+          <h1 class="left-hero-title p-4 max-w-md text-2xl lg:text-4xl 2xl:text-7xl font-bold text-white-dark">THE TRIBE HAS SPOKEN.</h1>
         </div>
       </section>
       <section class="left-hero h-2/3 md:h-screen md:w-6/12 bg-left-top bg-fixed bg-repeat bg-orange-dark" style="background-size: 10% !important;"></section>
@@ -30,14 +41,6 @@
             <!-- <h1 class="p-4 text-right text-6xl font-bold text-red-300">PICTURE HERE</h1> -->
           </div>
         </section>
-        <nav id="flyout-nav" class="hidden-right z-10 fixed md:relative flex top-0 w-full  h-screen bg-white-light items-center justify-center">
-          <ul>
-            <li class="p-8 font-bold text-3xl text-orange-dark"><a href="/"><a href="/survivors.html">Play Survivor</a></li>
-            <li class="p-8 font-bold text-3xl text-orange-dark"><a href="/">Contestants</a></li>
-            <li class="p-8 font-bold text-3xl text-orange-dark"><a href="/">Profile</a></li>
-            <li class="p-8 font-bold text-3xl text-orange-dark"><a href="/">Login</a></li>
-          </ul>
-        </nav>
       </section>
     </section>
     <section class="h-auto w-screen px-4">
@@ -54,20 +57,20 @@
     </section>
     <section class="h-auto w-screen px-4">
       <div class="flex flex-row justify-around md:w-8/12 mx-auto pb-36 2xl:py-48">
-      <a href="/" class="font-bold text-green-light text-lg tracking-wider leading-loose border-4 py-4 px-10 border-dashed rounded-full hover:bg-green-light hover:border-green-light hover:text-white-light">Play Now</a>
+      <a href="/" class="font-bold text-green-light text-lg tracking-wider leading-loose border-4 py-4 px-10 border-dashed rounded-full hover:bg-green-light hover:border-green-light hover:text-white-dark">Play Now</a>
       </div>
     </section>
     <section class="flex flex-col md:flex-row h-screen w-screen">
       <div class="bg-orange-dark flex flex-col justify-center flex-grow md:w-1/2">
         <div class="flex flex-row justify-around md:w-8/12 mx-auto py-12 2xl:py-48">
           <ul>
-            <li class="font-bold text-white-light text-2xl md:text-2xl lg:text-3xl text-center tracking-wider pb-12 leading-tight">Create an Account</li>
-            <li class="font-bold text-white-light text-2xl md:text-2xl lg:text-3xl text-center tracking-wider pb-12 leading-tight">Pick Your Tribe</li>
-            <li class="font-bold text-white-light text-2xl md:text-2xl lg:text-3xl text-center tracking-wider pb-12 leading-tight">Win the Million!</li>
+            <li class="font-bold text-white-dark text-2xl md:text-2xl lg:text-3xl text-center tracking-wider pb-12 leading-tight">Create an Account</li>
+            <li class="font-bold text-white-dark text-2xl md:text-2xl lg:text-3xl text-center tracking-wider pb-12 leading-tight">Pick Your Tribe</li>
+            <li class="font-bold text-white-dark text-2xl md:text-2xl lg:text-3xl text-center tracking-wider pb-12 leading-tight">Win the Million!</li>
           </ul>
         </div>
         <div class="flex flex-row justify-around md:w-1/2 mx-auto 2xl:py-48">
-          <a href="/" class="font-bold text-blue-light text-lg tracking-wider leading-loose border-4 py-4 px-10 border-dashed rounded-full hover:bg-blue-light hover:border-blue-light hover:text-white-light">Play Now</a>
+          <a href="/" class="font-bold text-blue-light text-lg tracking-wider leading-loose border-4 py-4 px-10 border-dashed rounded-full hover:bg-blue-light hover:border-blue-light hover:text-white-dark">Play Now</a>
         </div>
       </div>
       <div id="home-body-right" class="w-full bg-cover md:w-1/2 h-24 md:h-full flex-grow"></div>
@@ -105,12 +108,12 @@
     </section>
     <section class="h-auto w-screen px-4">
       <div class="flex flex-row justify-around md:w-8/12 mx-auto pt-24 pb-36 2xl:py-48">
-      <a href="/" class="font-bold text-green-light text-lg tracking-wider leading-loose border-4 py-4 px-10 border-dashed rounded-full hover:bg-green-light hover:border-green-light hover:text-white-light">Play Now</a>
+      <a href="/" class="font-bold text-green-light text-lg tracking-wider leading-loose border-4 py-4 px-10 border-dashed rounded-full hover:bg-green-light hover:border-green-light hover:text-white-dark">Play Now</a>
       </div>
     </section>
     <footer class="flex flex-col md:flex-row bg-green-dark w-screen content-end justify-between" style="height: 500px;">
       <div class="rounded-tr-3xl bg-blue-light flex flex-col w-0 md:h-44 md:w-80 self-end justify-around items-center">
-        <img src="/images/Survivor Fantasy Island Lock Ups_3.png" class="py-1 h-10 sm:h-32 2xl:h-24" />
+        <a href="/"><img src="/images/Survivor Fantasy Island Lock Ups_3.png" class="py-1 h-10 sm:h-32 2xl:h-24" /></a>
       </div>
       <div class="flex flex-col justify-center items-start pl-10 pb-10 md:pd-0 md:w-1/2">
         <ul>

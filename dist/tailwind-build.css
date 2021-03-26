@@ -7,9 +7,6 @@ footer {
   background-size: 140%;
   background-attachment: fixed;
   background-position: right bottom;
-  @supports not (background-attachment: fixed) {
-    background-attachment: local;
-  }
 }
 
 #flyout-nav {
@@ -18,7 +15,7 @@ footer {
 }
 
 #flyout-nav.hidden-right {
-  left: 100%;
+  left: 50%;
 }
 
 #home-body-right{
@@ -26,9 +23,6 @@ footer {
   background-size: 70%;
   background-attachment: fixed;
   background-position: right top;
-  @supports not (background-attachment: fixed) {
-    background-attachment: local;
-  }
 }
 
 .home-hero-card {
@@ -52,9 +46,6 @@ footer {
 .right-hero-overlay {
   height: calc(100% - 9rem);
   background: url("/images/colby-2.jpeg"); 
-  @supports not (background-attachment: fixed) {
-    background-attachment: local;
-  }
 }
 
 @media(max-width: 768px) {
@@ -64,6 +55,9 @@ footer {
   .right-hero-overlay {
     height: 100%
   }
+  #flyout-nav.hidden-right {
+    left: 100%;
+  }
 }
 
 #hero-title.animate__slideInLeft {
@@ -71,7 +65,17 @@ footer {
   animation-duration: 0.35s;
 }
 
+#hero.animate__slideInLeft {
+  animation-delay: 0.5s;
+  animation-duration: 0.5s;
+}
+
 #nav-items.animate__animated.animate__slideInDown {
+  animation-delay: 0.7s;
+  animation-duration: 0.35s;
+}
+
+#home-nav.animate__animated.animate__slideInDown {
   animation-delay: 1s;
   animation-duration: 0.35s;
 }
@@ -79,9 +83,6 @@ footer {
 .left-hero {
   background-size: 100% !important;
   background: url("/images/Palm Graphic Repeatable.png");
-  @supports not (background-attachment: fixed) {
-    background-attachment: local;
-  }
 }
 
 @tailwind base;
