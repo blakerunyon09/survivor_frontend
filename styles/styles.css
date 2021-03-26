@@ -3,7 +3,7 @@
 }
 
 footer {
-  background: url('http://localhost:3000/images/Palm Graphic Repeatable_palm.svg');
+  background: url('/images/Palm Graphic Repeatable_palm.svg');
   background-size: 140%;
   background-attachment: fixed;
   background-position: right bottom;
@@ -19,7 +19,7 @@ footer {
 }
 
 #home-body-right{
-  background: url('http://localhost:3000/images/Island Image-01.svg');
+  background: url('/images/Island Image-01.svg');
   background-size: 70%;
   background-attachment: fixed;
   background-position: right top;
@@ -69,12 +69,12 @@ nav.animate__animated.animate__slideInDown {
 
 .right-hero-overlay {
   height: calc(100% - 9rem);
-  background: url("http://localhost:3000/images/colby-2.jpeg");
+  background: url("/images/colby-2.jpeg");
 }
 
 .left-hero {
   background-size: 100% !important;
-  background: url("http://localhost:3000/images/Palm Graphic Repeatable.png");
+  background: url("/images/Palm Graphic Repeatable.png");
 }
 
 /*! tailwindcss v2.0.4 | MIT License | https://tailwindcss.com */
