@@ -5,42 +5,41 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles/styles.css">
-  <head>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-  <script defer src="./src/index.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+  <script defer src="./src/index.js"></script>
   <title>Survivor Fantasy Island</title>
 </head>
 <body class="bg-white-light overflow-x-hidden relative h-full w-full">
-  <header class="flex flex-col md:flex-row">
-    <nav class="animate__animated animate__slideInDown z-20 z-10 p-10 flex absolute justify-between w-screen">
-      <!-- <i href="/" class="fab fa-accusoft"></i> -->
-      <img id="logo" src="/images/Survivor Fantasy Island Lock Ups_2.png" class="h-14 sm:h-20 2xl:h-24" />
-      <i id="nav_button" class="fas fa-bars text-green-dark md:text-orange-light text-3xl md:text-4xl"></i>
-    </nav>
-    <section class="left-hero-overlay flex md:absolute h-90 md:w-1/2 md:h-2/3 bg-orange-light items-end animate__animated animate__slideInLeft">
-      <div id="hero-title" class="animate__animated animate__slideInLeft">
-        <h1 class="left-hero-title p-4 max-w-md text-2xl lg:text-4xl 2xl:text-7xl font-bold text-white-light">THE TRIBE HAS SPOKEN.</h1>
-      </div>
-    </section>
-    <section class="left-hero h-2/3 md:h-screen md:w-6/12 bg-left-top bg-fixed bg-repeat bg-orange-dark" style="background-size: 10% !important;"></section>
-    <section class="bg-green-light bg-green-200 md:h-screen md:w-6/12" style="height: 300px">
-      <section class="right-hero-overlay md:mt-36 flex md:absolute w-full md:w-1/2 bg-blue-dark items-end bg-center bg-cover animate__animated animate__slideInRight">
-        <div class="w-full animate__animated animate__slideInRight bg-center">
-          <!-- <h1 class="p-4 text-right text-6xl font-bold text-red-300">PICTURE HERE</h1> -->
-        </div>
-      </section>
-      <section id="flyout-nav" class="hidden-right z-10 fixed md:relative flex top-0 w-full  h-screen bg-white-light items-center justify-center">
-        <ul>
-          <li class="p-8 font-bold text-3xl text-orange-dark"><a href="/">Survivors Ready</a></li>
-          <li class="p-8 font-bold text-3xl text-orange-dark"><a href="/">Contestants</a></li>
-          <li class="p-8 font-bold text-3xl text-orange-dark"><a href="/">Profile</a></li>
-          <li class="p-8 font-bold text-3xl text-orange-dark"><a href="/">Login</a></li>
-        </ul>
-      </section>
-    </section>
+  <header id="nav-items" class="animate__animated animate__slideInDown z-20 z-10 p-10 flex absolute justify-between w-screen">
+    <!-- <i href="/" class="fab fa-accusoft"></i> -->
+    <img id="logo" src="/images/Survivor Fantasy Island Lock Ups_2.png" class="h-14 sm:h-20 2xl:h-24" />
+    <i id="nav_button" class="fas fa-bars text-green-dark md:text-orange-light text-3xl md:text-4xl"></i>
   </header>
   <main>
+    <section class="flex flex-col md:flex-row">
+      <section class="left-hero-overlay flex md:absolute h-90 md:w-1/2 md:h-2/3 bg-orange-light items-end animate__animated animate__slideInLeft">
+        <div id="hero-title" class="animate__animated animate__slideInLeft">
+          <h1 class="left-hero-title p-4 max-w-md text-2xl lg:text-4xl 2xl:text-7xl font-bold text-white-light">THE TRIBE HAS SPOKEN.</h1>
+        </div>
+      </section>
+      <section class="left-hero h-2/3 md:h-screen md:w-6/12 bg-left-top bg-fixed bg-repeat bg-orange-dark" style="background-size: 10% !important;"></section>
+      <section class="bg-green-light bg-green-200 md:h-screen md:w-6/12" style="height: 300px">
+        <section class="right-hero-overlay md:mt-36 flex md:absolute w-full md:w-1/2 bg-blue-dark items-end bg-center bg-cover animate__animated animate__slideInRight">
+          <div class="w-full animate__animated animate__slideInRight bg-center">
+            <!-- <h1 class="p-4 text-right text-6xl font-bold text-red-300">PICTURE HERE</h1> -->
+          </div>
+        </section>
+        <nav id="flyout-nav" class="hidden-right z-10 fixed md:relative flex top-0 w-full  h-screen bg-white-light items-center justify-center">
+          <ul>
+            <li class="p-8 font-bold text-3xl text-orange-dark"><a href="/"><a href="/survivors.html">Play Survivor</a></li>
+            <li class="p-8 font-bold text-3xl text-orange-dark"><a href="/">Contestants</a></li>
+            <li class="p-8 font-bold text-3xl text-orange-dark"><a href="/">Profile</a></li>
+            <li class="p-8 font-bold text-3xl text-orange-dark"><a href="/">Login</a></li>
+          </ul>
+        </nav>
+      </section>
+    </section>
     <section class="h-auto w-screen px-4">
       <div class="flex flex-row justify-around md:w-8/12 mx-auto pt-12 md:pt-28 2xl:pt-48">
         <div class="text-green-light text-xl sm:text-3xl lg:text-4xl 2xl:text-6xl font-bold">OUTWIT</div>
@@ -116,7 +115,7 @@
       <div class="flex flex-col justify-center items-start pl-10 pb-10 md:pd-0 md:w-1/2">
         <ul>
           <li class="font-bold pb-4 hover:text-green-dark cursor-pointer">HOME</li>
-          <li class="font-bold pb-4 hover:text-green-dark cursor-pointer">SURVIVORS</li>
+          <li class="font-bold pb-4 hover:text-green-dark cursor-pointer"><a href="/survivors.html">SURVIVORS</a></li>
           <li class="font-bold pb-4 hover:text-green-dark cursor-pointer">LOGIN</li>
           <li class="font-bold pb-4 hover:text-green-dark cursor-pointer">CREATE ACCOUNT</li>
           <li class="font-bold pb-6 hover:text-green-dark cursor-pointer">GAME HISTORY</li>
