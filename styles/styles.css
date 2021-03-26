@@ -47,9 +47,18 @@ footer {
           animation-duration: 0.45s
 }
 
+.right-hero-overlay {
+  height: calc(100% - 9rem);
+  background: url("/images/colby-2.jpeg");
+}
+
 @media(max-width: 768px) {
   .left-hero-overlay {
     height: 350px;
+  }
+
+  .right-hero-overlay {
+    height: 100%
   }
 }
 
@@ -65,11 +74,6 @@ nav.animate__animated.animate__slideInDown {
           animation-delay: 1s;
   -webkit-animation-duration: 0.35s;
           animation-duration: 0.35s;
-}
-
-.right-hero-overlay {
-  height: calc(100% - 9rem);
-  background: url("/images/colby-2.jpeg");
 }
 
 .left-hero {
