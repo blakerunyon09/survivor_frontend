@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden ">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/styles.css">
+  <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <script defer src="./src/index.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+  <title>Survivor Fantasy Island</title>
+</head>
+<body class="bg-white-light">
+  <header class="flex flex-col md:flex-row">
+    <nav class="animate__animated animate__slideInDown z-20 z-10 p-10 flex absolute justify-between w-screen">
+      <!-- <i href="/" class="fab fa-accusoft"></i> -->
+      <img id="logo" src="http://localhost:3000/images/Survivor Fantasy Island Lock Ups_2.png" class="h-20 sm:h-20 2xl:h-24" />
+      <i id="nav_button" class="fas fa-bars text-green-dark md:text-orange-light text-4xl"></i>
+    </nav>
+    <section class="left-hero-overlay flex md:absolute h-90 md:w-1/2 md:h-2/3 bg-orange-light items-end animate__animated animate__slideInLeft">
+      <div id="hero-title" class="animate__animated animate__slideInLeft">
+        <h1 class="left-hero-title p-4 max-w-md text-2xl lg:text-4xl 2xl:text-7xl font-bold text-white-light">THE TRIBE HAS SPOKEN.</h1>
+      </div>
+    </section>
+    <section class="left-hero h-2/3 md:h-screen md:w-6/12 bg-left-top bg-fixed bg-repeat bg-orange-dark" style="background-size: 10% !important;"></section>
+    <section class="bg-green-light bg-green-200 h-screen md:w-6/12">
+      <section class="right-hero-overlay md:mt-36 flex md:absolute w-full md:w-1/2 bg-blue-dark items-end bg-center bg-cover animate__animated animate__slideInRight">
+        <div class="w-full animate__animated animate__slideInRight bg-center">
+          <!-- <h1 class="p-4 text-right text-6xl font-bold text-red-300">PICTURE HERE</h1> -->
+        </div>
+      </section>
+      <section id="flyout-nav" class="hidden-right z-10 flex top-0 absolute md:relative w-full  h-full bg-white-light items-center justify-center">
+        <ul>
+          <li class="p-8 font-bold text-3xl text-orange-dark"><a href="/">Survivors Ready</a></li>
+          <li class="p-8 font-bold text-3xl text-orange-dark"><a href="/">Contestants</a></li>
+          <li class="p-8 font-bold text-3xl text-orange-dark"><a href="/">Profile</a></li>
+          <li class="p-8 font-bold text-3xl text-orange-dark"><a href="/">Login</a></li>
+        </ul>
+      </section>
+    </section>
+  </header>
+  <main>
+    <section class="h-auto w-screen px-4">
+      <div class="flex flex-row justify-around md:w-8/12 mx-auto pt-28 2xl:pt-48">
+        <div class="text-green-light text-2xl sm:text-3xl lg:text-4xl 2xl:text-6xl font-bold">OUTWIT</div>
+        <div class="text-green-light text-2xl sm:text-3xl lg:text-4xl 2xl:text-6xl font-bold pt-20">OUTLAST</div>
+        <div class="text-green-light text-2xl sm:text-3xl lg:text-4xl 2xl:text-6xl font-bold pt-10">OUTPLAY</div>
+      </div>
+    </section>
+    <section class="h-auto w-screen px-4">
+      <div class="flex flex-row justify-around md:w-8/12 mx-auto py-28 2xl:py-48">
+      <p class="font-normal text-green-light text-2xl tracking-wider leading-loose">Survivor Fantasy Island is a fan created simulation game. We've attempted to take our love of Survivor and create a fantasy football style simulation game with it. All of your favorite survivors from all 40 season are in the game. We hope you enjoy the game.</p>
+      </div>
+    </section>
+    <section class="h-auto w-screen px-4">
+      <div class="flex flex-row justify-around md:w-8/12 mx-auto pb-36 2xl:py-48">
+      <a href="/" class="font-bold text-green-light text-lg tracking-wider leading-loose border-4 py-4 px-10 border-dashed rounded-full hover:bg-green-light hover:border-green-light hover:text-white-light">Play Now</a>
+      </div>
+    </section>
+    <section class="flex flex-col md:flex-row h-screen w-screen">
+      <div class="bg-orange-dark flex flex-col justify-center flex-grow md:w-1/2">
+        <div class="flex flex-row justify-around md:w-8/12 mx-auto py-12 2xl:py-48">
+          <ul>
+            <li class="font-bold text-white-light text-3xl md:text-2xl lg:text-3xl text-center tracking-wider pb-12 leading-tight">Create an Account</li>
+            <li class="font-bold text-white-light text-3xl md:text-2xl lg:text-3xl text-center tracking-wider pb-12 leading-tight">Pick Your Tribe</li>
+            <li class="font-bold text-white-light text-3xl md:text-2xl lg:text-3xl text-center tracking-wider pb-12 leading-tight">Win the Million!</li>
+          </ul>
+        </div>
+        <div class="flex flex-row justify-around md:w-1/2 mx-auto 2xl:py-48">
+          <a href="/" class="font-bold text-blue-light text-lg tracking-wider leading-loose border-4 py-4 px-10 border-dashed rounded-full hover:bg-blue-light hover:border-blue-light hover:text-white-light">Play Now</a>
+        </div>
+      </div>
+      <div id="home-body-right" class="w-full bg-cover md:w-1/2 h-24 md:h-full flex-grow"></div>
+    </section>
+    <section class="flex flex-col md:flex-row pb-8 w-screen">
+      <div class="flex flex-row justify-around md:w-8/12 mx-auto pt-28 2xl:pt-48">
+        <div class="text-green-light text-2xl sm:text-3xl lg:text-4xl 2xl:text-6xl font-bold pt-10">DROP</div>
+        <div class="text-green-light text-2xl sm:text-3xl lg:text-4xl 2xl:text-6xl font-bold">YOUR</div>
+        <div class="text-green-light text-2xl sm:text-3xl lg:text-4xl 2xl:text-6xl font-bold pt-20">BUFFS</div>
+      </div>
+    </section>
+    <section class="flex flex-col md:flex-row w-screen">
+      <div class="flex flex-col md:flex-row justify-around md:w-10/12 mx-auto py-10 2xl:pt-48">
+        <div class="home-hero-card text-green-light text-lg mr-2 mb-8 sm:text-1xl lg:text-2xl 2xl:text-4xl font-normal tracking-wider leading-loose">
+          <img class="hover:scale-150 h-80 rounded" src="http://localhost:3000/images/Screen Shot 2021-03-25 at 4.52.34 PM.png" />
+          <h3 class="text-xl text-center pt-4">RUSSELL HANTZ</h3>
+          <h4 class="text-lg text-center pt-2">BULLY</h4>
+        </div>
+        <div class="home-hero-card text-green-light mr-2 mb-8 text-lg sm:text-1xl lg:text-2xl 2xl:text-4xl font-normal tracking-wider leading-loose">
+          <img class="h-80 rounded" src="http://localhost:3000/images/Screen Shot 2021-03-25 at 4.53.41 PM.png" />
+          <h3 class="text-xl text-center pt-4">PARVATI SHALLOW</h3>
+          <h4 class="text-lg text-center pt-2">CHARISMATIC</h4>
+        </div>
+        <div class="home-hero-card text-green-light text-lg mb-8 sm:text-1xl lg:text-2xl 2xl:text-4xl font-normal tracking-wider leading-loose">
+          <img  class="h-80 rounded" src="http://localhost:3000/images/Screen Shot 2021-03-25 at 4.54.48 PM.png" />
+          <h3 class="text-xl text-center pt-4">JAMES CLEMENT</h3>
+          <h4 class="text-lg text-center pt-2">PHYSICAL</h4>
+        </div>      
+      </div>
+    </section>
+    <section class="h-auto w-screen px-4">
+      <div class="flex flex-row justify-around md:w-8/12 mx-auto py-12 2xl:py-48">
+      <p class="font-normal text-green-light text-2xl tracking-wider leading-loose">Who will you choose for your tribe. An all female alliance led by Parv and Sandra, fight for courage and honor with Rupurt and Coach, or will you bully and sabotage your way to the end with Russel and Tony? Create your alliance now!</p>
+      </div>
+    </section>
+    <section class="h-auto w-screen px-4">
+      <div class="flex flex-row justify-around md:w-8/12 mx-auto pt-24 pb-36 2xl:py-48">
+      <a href="/" class="font-bold text-green-light text-lg tracking-wider leading-loose border-4 py-4 px-10 border-dashed rounded-full hover:bg-green-light hover:border-green-light hover:text-white-light">Play Now</a>
+      </div>
+    </section>
+    <footer class="flex flex-col md:flex-row bg-green-dark w-screen content-end justify-between" style="height: 500px;">
+      <div class="rounded-tr-3xl bg-blue-light flex flex-col w-0 md:h-44 md:w-80 self-end justify-around items-center">
+        <img src="http://localhost:3000/images/Survivor Fantasy Island Lock Ups_3.png" class="py-1 h-10 sm:h-32 2xl:h-24" />
+      </div>
+      <div class="flex flex-col justify-center items-start pl-10 pb-10 md:pd-0 md:w-1/2">
+        <ul>
+          <li class="font-bold pb-4 hover:text-green-dark">HOME</li>
+          <li class="font-bold pb-4">SURVIVORS</li>
+          <li class="font-bold pb-4">LOGIN</li>
+          <li class="font-bold pb-4">CREATE ACCOUNT</li>
+          <li class="font-bold pb-6">GAME HISTORY</li>
+        </ul>
+        <div>
+          <span>Hire Me.</span>
+        </div>
+        <div class="py-4">
+          <i class="text-3xl pr-4 fas fa-envelope"></i>
+          <i class="text-3xl pr-4 fab fa-github"></i>
+          <i class="text-3xl fab fa-linkedin-in"></i>
+        </div>
+        <div>
+          <span>© 2021 WildPineapple | Website by me</span>
+        </div>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>

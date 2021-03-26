@@ -1,0 +1,74 @@
+#__bs_notify__ {
+  display: none !important;
+}
+
+footer {
+  background: url('http://localhost:3000/images/Palm Graphic Repeatable_palm.svg');
+  background-size: 140%;
+  background-attachment: fixed;
+  background-position: right bottom;
+}
+
+#flyout-nav {
+  transition: left 0.5s;
+  left: 0;
+}
+
+#flyout-nav.hidden-right {
+  left: 100%;
+}
+
+#home-body-right{
+  background: url('http://localhost:3000/images/Island Image-01.svg');
+  background-size: 70%;
+  background-attachment: fixed;
+  background-position: right top;
+}
+
+.home-hero-card {
+  transition: transform 0.15s ease;
+}
+
+.home-hero-card:hover {
+  transform: translateY(-12px);
+}
+
+.right-hero-overlay.animate__slideInRight {
+    animation-delay: 0.25s;
+    animation-duration: 0.45s;
+}
+
+.left-hero-overlay.animate__slideInLeft {
+  animation-delay: 0.6s;
+  animation-duration: 0.45s
+}
+
+@media(max-width: 768px) {
+  .left-hero-overlay {
+    height: 350px;
+  }
+}
+
+#hero-title.animate__slideInLeft {
+  animation-delay: 1s;
+  animation-duration: 0.35s;
+}
+
+nav.animate__animated.animate__slideInDown {
+  animation-delay: 1s;
+  animation-duration: 0.35s;
+}
+
+.right-hero-overlay {
+  height: calc(100% - 9rem);
+  background: url("http://localhost:3000/images/colby-2.jpeg"); 
+}
+
+.left-hero {
+  background-size: 100% !important;
+  background: url("http://localhost:3000/images/Palm Graphic Repeatable.png");
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
