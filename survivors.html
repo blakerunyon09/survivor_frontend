@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
   <script defer src="./src/index.js"></script>
+  <script defer src="./src/survivors.js"></script>
   <title>Survivor Fantasy Island</title>
 </head>
 <body class="bg-white-dark overflow-x-hidden relative h-full w-full">
@@ -33,155 +34,95 @@
         SURVIVORS
       </div>
     </section>
-    <section class="flex flex-col md:flex-row w-10/12 flex-wrap my-5 md:mx-auto justify-center p-2 items-center bg-white-dark bg-no-repeat" style="max-width: 1250px;">
-      <!-- CARD 1 -->
-      <!-- CARD 1 -->
-      <!-- CARD 1 -->
-      <div class="text-white-light p-1 md:w-80 flex text-xl mx-1 mt-1 md:my-1 font-bold rounded-md bg-white-light w-full" style="box-shadow: 1px 1px 10px #d3d3d3; width: 275px;">
-        <div>
-          <img class="h-32 mt-2 ml-2 rounded" src="/images/Screen Shot 2021-03-26 at 7.13.20 PM.png">
-          <h3 class="leading-tight mt-1 mx-2 text-orange-dark">Boston Rob</h3>
-          <p class="pl-2 pb-1 leading-tight text-green-dark font-light text-sm">Boston, MA</p>
+    <section class="flex flex-col md:flex-row my-5 min-h-screen animate__animated animate__slideInLeft m-auto"  style="max-width: 1500px">
+      <aside id="finder_bar" class="md:sticky p-4 mx-8 my-4 bg-blue-dark rounded-md" style="height: fit-content; top: 25px; min-width: 220px;">
+        <span class="text-white-light font-bold text-xl ml-2 mb-4 inline-block">Find a Survivor</span>
+        <div class="border-b-2 m-2" style="color: #ffffff">
+          <div id="survivor_finder_hide" class="flex justify-between cursor-pointer text-white-light form-hider m-1 text-lg uppercase font-bold"><div class="pointer-events-none">Season</div><i class="fas fa-angle-down mt-1 pointer-events-none"></i></div>
+          <form id="survivor_finder" class="hidden cursor-pointer mx-2 my-4" style="color: #BDBDBD">
+            <select name="season" id="season_sort" class="p-2 font-bold rounded-lg" style="width: 150px">
+              <option value="" disabled selected>Season</option>
+              <option value="0">All Seasons</option>
+              <option value="1">Borneo</option>
+              <option value="2">Australia</option>
+              <option value="3">Africa</option>
+              <option value="4">Marquesas</option>
+              <option value="5">Thailand</option>
+              <option value="6">Amazon</option>
+              <option value="7">Pearl Islands</option>
+              <option value="8">All-Stars</option>
+              <option value="9">Vanuatu</option>
+              <option value="10">Palau</option>
+              <option value="11">Gautemala</option>
+              <option value="12">Panama</option>
+              <option value="13">Cook Islands</option>
+              <option value="14">Fiji</option>
+              <option value="15">China</option>
+              <option value="16">Micronesia</option>
+              <option value="17">Gabon</option>
+              <option value="18">Tocantins</option>
+              <option value="19">Samoa</option>
+              <option value="20">Heroes v Villians</option>
+              <option value="21">Nicaragua</option>
+              <option value="22">Redemption Island</option>
+              <option value="23">South Pacific</option>
+              <option value="24">One World</option>
+              <option value="25">Philippines</option>
+              <option value="26">Caramoan</option>
+              <option value="27">Blood v Water</option>
+              <option value="28">Cagayan</option>
+              <option value="29">San Juan del Sur</option>
+              <option value="30">Worlds Apart</option>
+              <option value="31">Cambodia</option>
+              <option value="32">Kaôh Rōng</option>
+              <option value="33">Millenials v Gen X</option>
+              <option value="34">Game Changers</option>
+              <option value="35">Hero/Vill/Hust</option>
+              <option value="36">Ghost Island</option>
+              <option value="37">David v Goliath</option>
+              <option value="38">Edge of Extinction</option>
+              <option value="39">Island of Idols</option>
+              <option value="40">Winners at War</option>
+            </select>
+          </form>
         </div>
-        <div class="flex flex-col justify-around ml-2">
-          <div class="flex flex-row">
-            <div class="pr-2">
-              <p class="pb-1 text-xs font-light leading-tight text-green-dark"><strong class="font-bold">Season:</strong> 12</p>
-              <p class="pb-1 text-xs font-light leading-tight text-green-dark"><strong class="font-bold">Accuracy:</strong> 92</p>
-              <p class="pb-1 text-xs font-light leading-tight text-green-dark"><strong class="font-bold">Immunity:</strong> 9</p>
-              <p class="pb-1 text-xs font-light leading-tight text-green-dark"><strong class="font-bold">Place:</strong> 2</p>
-              <p class="pb-1 text-xs font-light leading-tight text-green-dark"><strong class="font-bold">Type:</strong> Strategic</p>
-              <p class="pb-1 text-xs font-light leading-tight text-green-dark"><strong class="font-bold">Score:</strong> 81</p>
-            </div>
-          </div>
-          <div class="flex justify-center mb-2">
-            <button class="bg-green-dark text-tiny mr-2 mt-auto h-6 w-12 rounded leading-tight"><a href="/survivor.html">View</a></button>
-            <button class="bg-green-dark text-tiny mt-auto h-6 w-12 rounded leading-tight">Add</button>
-          </div>
+        <div class="border-b-2 m-2 text-white-light">
+          <div id="survivor_finder_hide" class="flex justify-between cursor-pointer text-white-light form-hider m-1 text-lg uppercase font-bold"><div class="pointer-events-none">Type</div><i class="fas fa-angle-down mt-1 pointer-events-none"></i></div>
+          <select name="style" id="survivor_style" class="hidden cursor-pointer mx-2 my-4 p-2 font-bold rounded-lg" style="width: 150px; color: #BDBDBD">
+            <option value="" disabled selected>Type</option>
+            <option value="All_Types">All Types</option>
+            <option value="Antagonistic">Antagonistic</option>
+            <option value="Athletic">Athletic</option>
+            <option value="Chaotic">Chaotic</option>
+            <option value="Charismatic">Charismatic</option>
+            <option value="Goat">Goat</option>
+            <option value="Strategic">Strategic</option>
+          </select>
         </div>
-      </div>
-      <!-- END CARD 1 -->
-      <!-- END CARD 1 -->
-      <!-- END CARD 1 -->
-      <div class="text-white-light p-1 md:w-80 flex text-xl mx-1 mt-1 md:my-1 font-bold rounded-md bg-white-light w-full" style="box-shadow: 1px 1px 10px #d3d3d3; width: 275px;">
-        <div>
-          <img class="h-32 mt-2 ml-2 rounded" src="/images/Screen Shot 2021-03-26 at 7.13.20 PM.png">
-          <h3 class="leading-tight mt-1 mx-2 text-orange-dark">Boston Rob</h3>
-          <p class="pl-2 pb-1 leading-tight text-green-dark font-light text-sm">Boston, MA</p>
+        <div class="border-b-2 m-2 text-white-light">
+          <div id="survivor_finder_hide" class="flex justify-between cursor-pointer text-white-light form-hider m-1 text-lg uppercase font-bold"><div class="pointer-events-none">Score</div><i class="fas fa-angle-down mt-1 pointer-events-none"></i></div>
+          <form id="survivor_score" class="hidden cursor-pointer mx-2 my-4" style="width: 150px;">
+            <input type="text" id="minScore" name="fname" placeholder="min" value="" style="width: 70px;" class="mb-1 p-2 font-bold rounded-lg" style="color: #BDBDBD">
+            <input type="text" id="maxScore" name="lname" placeholder="max" value="" style="width: 70px;" class="p-2 font-bold rounded-lg" style="color: #BDBDBD">
+          </form>
         </div>
-        <div class="flex flex-col justify-around ml-2">
-          <div class="flex flex-row">
-            <div class="pr-2">
-              <p class="pb-1 text-xs font-light leading-tight text-green-dark"><strong class="font-bold">Season:</strong> 12</p>
-              <p class="pb-1 text-xs font-light leading-tight text-green-dark"><strong class="font-bold">Accuracy:</strong> 92</p>
-              <p class="pb-1 text-xs font-light leading-tight text-green-dark"><strong class="font-bold">Immunity:</strong> 9</p>
-              <p class="pb-1 text-xs font-light leading-tight text-green-dark"><strong class="font-bold">Place:</strong> 2</p>
-              <p class="pb-1 text-xs font-light leading-tight text-green-dark"><strong class="font-bold">Type:</strong> Strategic</p>
-              <p class="pb-1 text-xs font-light leading-tight text-green-dark"><strong class="font-bold">Score:</strong> 81</p>
-            </div>
-          </div>
-          <div class="flex justify-center mb-2">
-            <button class="bg-green-dark text-tiny mr-2 mt-auto h-6 w-12 rounded leading-tight">View</button>
-            <button class="bg-green-dark text-tiny mt-auto h-6 w-12 rounded leading-tight">Add</button>
-          </div>
+        <div class="border-b-2 m-2 text-white-light">
+          <div id="survivor_sort_hide" class="flex justify-between cursor-pointer text-white-light form-hider m-1 text-lg uppercase font-bold"><div class="pointer-events-none">Sort</div><i class="fas fa-angle-down mt-1 pointer-events-none"></i></div>
+          <form id="survivor_sort" class="hidden cursor-pointer mx-2 my-4 font-bold">
+            <input type="radio" id="name" name="sort" value="name">
+            <label for="name">Name</label><br>
+            <input type="radio" id="place" name="sort" value="place">
+            <label for="place">Place Finished</label><br>
+            <input type="radio" id="season" name="sort" value="season">
+            <label for="season">Season Name</label><br>
+            <input type="radio" id="season_num" name="sort" value="season_num">
+            <label for="season_num">Season Number</label><br>
+            <input type="radio" id="survivor_score-sort" name="sort" value="survivor_score">
+            <label for="survivor_score-sort">Survivor Score</label><br>
+          </form>
         </div>
-      </div>
-      <div class="text-white-light p-1 md:w-80 flex text-xl mx-1 mt-1 md:my-1 font-bold rounded-md bg-white-light w-full" style="box-shadow: 1px 1px 10px #d3d3d3; width: 275px;">
-        <div>
-          <img class="h-32 mt-2 ml-2 rounded" src="/images/Screen Shot 2021-03-26 at 7.13.20 PM.png">
-          <h3 class="leading-tight mt-1 mx-2 text-orange-dark">Boston Rob</h3>
-          <p class="pl-2 pb-1 leading-tight text-green-dark font-light text-sm">Boston, MA</p>
-        </div>
-        <div class="flex flex-col justify-around ml-2">
-          <div class="flex flex-row">
-            <div class="pr-2">
-              <p class="pb-1 text-xs font-light leading-tight text-green-dark"><strong class="font-bold">Season:</strong> 12</p>
-              <p class="pb-1 text-xs font-light leading-tight text-green-dark"><strong class="font-bold">Accuracy:</strong> 92</p>
-              <p class="pb-1 text-xs font-light leading-tight text-green-dark"><strong class="font-bold">Immunity:</strong> 9</p>
-              <p class="pb-1 text-xs font-light leading-tight text-green-dark"><strong class="font-bold">Place:</strong> 2</p>
-              <p class="pb-1 text-xs font-light leading-tight text-green-dark"><strong class="font-bold">Type:</strong> Strategic</p>
-              <p class="pb-1 text-xs font-light leading-tight text-green-dark"><strong class="font-bold">Score:</strong> 81</p>
-            </div>
-          </div>
-          <div class="flex justify-center mb-2">
-            <button class="bg-green-dark text-tiny mr-2 mt-auto h-6 w-12 rounded leading-tight">View</button>
-            <button class="bg-green-dark text-tiny mt-auto h-6 w-12 rounded leading-tight">Add</button>
-          </div>
-        </div>
-      </div>
-      <div class="text-white-light p-1 md:w-80 flex text-xl mx-1 mt-1 md:my-1 font-bold rounded-md bg-white-light w-full" style="box-shadow: 1px 1px 10px #d3d3d3; width: 275px;">
-        <div>
-          <img class="h-32 mt-2 ml-2 rounded" src="/images/Screen Shot 2021-03-26 at 7.13.20 PM.png">
-          <h3 class="leading-tight mt-1 mx-2 text-orange-dark">Boston Rob</h3>
-          <p class="pl-2 pb-1 leading-tight text-green-dark font-light text-sm">Boston, MA</p>
-        </div>
-        <div class="flex flex-col justify-around ml-2">
-          <div class="flex flex-row">
-            <div class="pr-2">
-              <p class="pb-1 text-xs font-light leading-tight text-green-dark"><strong class="font-bold">Season:</strong> 12</p>
-              <p class="pb-1 text-xs font-light leading-tight text-green-dark"><strong class="font-bold">Accuracy:</strong> 92</p>
-              <p class="pb-1 text-xs font-light leading-tight text-green-dark"><strong class="font-bold">Immunity:</strong> 9</p>
-              <p class="pb-1 text-xs font-light leading-tight text-green-dark"><strong class="font-bold">Place:</strong> 2</p>
-              <p class="pb-1 text-xs font-light leading-tight text-green-dark"><strong class="font-bold">Type:</strong> Strategic</p>
-              <p class="pb-1 text-xs font-light leading-tight text-green-dark"><strong class="font-bold">Score:</strong> 81</p>
-            </div>
-          </div>
-          <div class="flex justify-center mb-2">
-            <button class="bg-green-dark text-tiny mr-2 mt-auto h-6 w-12 rounded leading-tight">View</button>
-            <button class="bg-green-dark text-tiny mt-auto h-6 w-12 rounded leading-tight">Add</button>
-          </div>
-        </div>
-      </div>
-      <div class="text-white-light p-1 md:w-80 flex text-xl mx-1 mt-1 md:my-1 font-bold rounded-md bg-white-light w-full" style="box-shadow: 1px 1px 10px #d3d3d3; width: 275px;">
-        <div>
-          <img class="h-32 mt-2 ml-2 rounded" src="/images/Screen Shot 2021-03-26 at 7.13.20 PM.png">
-          <h3 class="leading-tight mt-1 mx-2 text-orange-dark">Boston Rob</h3>
-          <p class="pl-2 pb-1 leading-tight text-green-dark font-light text-sm">Boston, MA</p>
-        </div>
-        <div class="flex flex-col justify-around ml-2">
-          <div class="flex flex-row">
-            <div class="pr-2">
-              <p class="pb-1 text-xs font-light leading-tight text-green-dark"><strong class="font-bold">Season:</strong> 12</p>
-              <p class="pb-1 text-xs font-light leading-tight text-green-dark"><strong class="font-bold">Accuracy:</strong> 92</p>
-              <p class="pb-1 text-xs font-light leading-tight text-green-dark"><strong class="font-bold">Immunity:</strong> 9</p>
-              <p class="pb-1 text-xs font-light leading-tight text-green-dark"><strong class="font-bold">Place:</strong> 2</p>
-              <p class="pb-1 text-xs font-light leading-tight text-green-dark"><strong class="font-bold">Type:</strong> Strategic</p>
-              <p class="pb-1 text-xs font-light leading-tight text-green-dark"><strong class="font-bold">Score:</strong> 81</p>
-            </div>
-          </div>
-          <div class="flex justify-center mb-2">
-            <button class="bg-green-dark text-tiny mr-2 mt-auto h-6 w-12 rounded leading-tight">View</button>
-            <button class="bg-green-dark text-tiny mt-auto h-6 w-12 rounded leading-tight">Add</button>
-          </div>
-        </div>
-      </div>
-      <div class="text-white-light p-1 md:w-80 flex text-xl mx-1 mt-1 md:my-1 font-bold rounded-md bg-white-light w-full" style="box-shadow: 1px 1px 10px #d3d3d3; width: 275px;">
-        <div>
-          <img class="h-32 mt-2 ml-2 rounded" src="/images/Screen Shot 2021-03-26 at 7.13.20 PM.png">
-          <h3 class="leading-tight mt-1 mx-2 text-orange-dark">Boston Rob</h3>
-          <p class="pl-2 pb-1 leading-tight text-green-dark font-light text-sm">Boston, MA</p>
-        </div>
-        <div class="flex flex-col justify-around ml-2">
-          <div class="flex flex-row">
-            <div class="pr-2">
-              <p class="pb-1 text-xs font-light leading-tight text-green-dark"><strong class="font-bold">Season:</strong> 12</p>
-              <p class="pb-1 text-xs font-light leading-tight text-green-dark"><strong class="font-bold">Accuracy:</strong> 92</p>
-              <p class="pb-1 text-xs font-light leading-tight text-green-dark"><strong class="font-bold">Immunity:</strong> 9</p>
-              <p class="pb-1 text-xs font-light leading-tight text-green-dark"><strong class="font-bold">Place:</strong> 2</p>
-              <p class="pb-1 text-xs font-light leading-tight text-green-dark"><strong class="font-bold">Type:</strong> Strategic</p>
-              <p class="pb-1 text-xs font-light leading-tight text-green-dark"><strong class="font-bold">Score:</strong> 81</p>
-            </div>
-          </div>
-          <div class="flex justify-center mb-2">
-            <button class="bg-green-dark text-tiny mr-2 mt-auto h-6 w-12 rounded leading-tight">View</button>
-            <button class="bg-green-dark text-tiny mt-auto h-6 w-12 rounded leading-tight">Add</button>
-          </div>
-        </div>
-      </div>
-      <!-- END OF CARDS -->
-      <!-- END OF CARDS -->
-      <!-- END OF CARDS -->
-      <!-- END OF CARDS -->
+      </aside>
+      <div id="survivor_cards" class="flex flex-col md:flex-row w-auto flex-wrap justify-center py-2 items-center bg-white-dark bg-no-repeat" style="max-width: 1000px;"></div>
     </section>
   </main>
   <footer class="flex flex-col md:flex-row bg-green-dark w-screen content-end justify-between" style="height: 500px;">

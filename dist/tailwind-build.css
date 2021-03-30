@@ -1,5 +1,15 @@
+/* HIDE LITE-SERVER */
+
 #__bs_notify__ {
   display: none !important;
+}
+
+::selection {
+  background: #00000000;
+}
+
+::-moz-selection {
+  background: #00000000;
 }
 
 footer {
@@ -84,6 +94,57 @@ footer {
   background-size: 100% !important;
   background: url("/images/Palm Graphic Repeatable.png");
 }
+
+/* CARD STYLES */
+
+.card {
+  box-shadow: 1px 1px 10px #d3d3d3; 
+  @apply p-1 w-72 flex text-xl mx-1 mt-1 md:my-1 font-bold rounded-md bg-white-light
+}
+
+.card img {
+  @apply h-32 mt-2 ml-2 rounded
+}
+
+.card h3 {
+  width: 140px;
+  @apply leading-tight mt-1 mx-2 text-orange-dark text-lg overflow-ellipsis	whitespace-nowrap overflow-hidden
+}
+
+.card .left-card-col p {
+  @apply pl-2 pb-1 leading-tight text-green-dark font-light text-sm
+}
+
+.card .right-card-col {
+  @apply flex flex-col justify-around ml-2
+}
+
+.card .right-card-col-top {
+  @apply flex
+}
+
+.card .right-card-col-bottom {
+  width: 103px;
+  @apply flex justify-around mb-2
+}
+
+.card .right-card-col-top div {
+  @apply pr-2
+} 
+
+.card .right-card-col-top div p {
+  @apply pb-1 text-xs font-light leading-tight text-green-dark
+}
+
+.card .right-card-col-top div p strong {
+  @apply font-bold
+}
+
+.btn {
+  @apply bg-green-dark text-sm mt-auto h-6 w-12 rounded leading-tight text-white-light font-bold
+}
+
+/* TAILWIND STYLES */
 
 @tailwind base;
 @tailwind components;

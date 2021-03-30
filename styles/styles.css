@@ -1,5 +1,19 @@
+/* HIDE LITE-SERVER */
+
 #__bs_notify__ {
   display: none !important;
+}
+
+::-moz-selection {
+  background: #00000000;
+}
+
+::selection {
+  background: #00000000;
+}
+
+::-moz-selection {
+  background: #00000000;
 }
 
 footer {
@@ -99,7 +113,118 @@ footer {
   background: url("/images/Palm Graphic Repeatable.png");
 }
 
-/*! tailwindcss v2.0.4 | MIT License | https://tailwindcss.com */
+/* CARD STYLES */
+
+.card {
+  box-shadow: 1px 1px 10px #d3d3d3;
+  --tw-bg-opacity: 1;
+  background-color: rgba(248, 248, 255, var(--tw-bg-opacity));
+  border-radius: 0.375rem;
+  display: flex;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  margin-top: 0.25rem;
+  padding: 0.25rem;
+  width: 18rem
+}
+
+@media (min-width: 768px) {
+  .card {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+}
+
+.card img {
+  border-radius: 0.25rem;
+  height: 8rem;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem
+}
+
+.card h3 {
+  width: 140px;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  line-height: 1.25;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  margin-top: 0.25rem;
+  overflow: hidden;
+  --tw-text-opacity: 1;
+  color: rgba(242, 113, 81, var(--tw-text-opacity));
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+.card .left-card-col p {
+  font-weight: 300;
+  font-size: .875rem;
+  line-height: 1.25rem;
+  line-height: 1.25;
+  padding-bottom: 0.25rem;
+  padding-left: 0.5rem;
+  --tw-text-opacity: 1;
+  color: rgba(0, 156, 145, var(--tw-text-opacity))
+}
+
+.card .right-card-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 0.5rem
+}
+
+.card .right-card-col-top {
+  display: flex
+}
+
+.card .right-card-col-bottom {
+  width: 103px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 0.5rem
+}
+
+.card .right-card-col-top div {
+  padding-right: 0.5rem
+}
+
+.card .right-card-col-top div p {
+  font-weight: 300;
+  font-size: .75rem;
+  line-height: 1rem;
+  line-height: 1.25;
+  padding-bottom: 0.25rem;
+  --tw-text-opacity: 1;
+  color: rgba(0, 156, 145, var(--tw-text-opacity))
+}
+
+.card .right-card-col-top div p strong {
+  font-weight: 700
+}
+
+.btn {
+  --tw-bg-opacity: 1;
+  background-color: rgba(0, 156, 145, var(--tw-bg-opacity));
+  border-radius: 0.25rem;
+  font-weight: 700;
+  height: 1.5rem;
+  font-size: .875rem;
+  line-height: 1.25rem;
+  line-height: 1.25;
+  margin-top: auto;
+  --tw-text-opacity: 1;
+  color: rgba(248, 248, 255, var(--tw-text-opacity));
+  width: 3rem
+}
+
+/* TAILWIND STYLES */
+
+/* ! tailwindcss v2.0.4 | MIT License | https://tailwindcss.com */
 
 /*! modern-normalize v1.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 
