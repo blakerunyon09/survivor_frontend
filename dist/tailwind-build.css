@@ -4,11 +4,16 @@
   display: none !important;
 }
 
-::selection {
+aside {
+  width: 300px;
+  min-width: 300px;
+}
+
+aside::selection {
   background: #00000000;
 }
 
-::-moz-selection {
+aside::-moz-selection {
   background: #00000000;
 }
 
@@ -59,6 +64,10 @@ footer {
 }
 
 @media(max-width: 768px) {
+  aside {
+    width: 350px;
+    min-width: 300px;
+  }
   .left-hero-overlay {
     height: 350px;
   }

@@ -13,10 +13,10 @@
 </head>
 <body class="bg-white-dark overflow-x-hidden relative h-full w-full">
   <header class="h-32 md:h-36">
-    <div id="nav-items" class="animate__animated animate__slideInDown z-20 z-10 p-10 flex absolute justify-between w-screen">
+    <div id="nav-items" class="animate__animated animate__slideInDown z-20 z-10 p-10 md:p-6 flex absolute justify-between w-screen">
       <!-- <i href="/" class="fab fa-accusoft"></i> -->
       <a href="/"><img id="logo" src="/images/Survivor Fantasy Island Lock Ups_2.png" class="h-14 sm:h-20 2xl:h-24" /></a>
-      <i id="nav_button" class="fas fa-bars text-green-dark text-3xl md:text-4xl"></i>
+      <i id="nav_button" class="fas fa-bars text-green-dark text-3xl md:text-4xl md:pt-4"></i>
     </div>
     <nav id="flyout-nav" class="bg-blue-light hidden-right z-10 fixed md:relative flex top-0 w-full md:w-1/2 ml-auto h-screen bg-white-light items-center justify-center">
       <ul>
@@ -34,95 +34,161 @@
         SURVIVORS
       </div>
     </section>
-    <section class="flex flex-col md:flex-row my-5 min-h-screen animate__animated animate__slideInLeft m-auto"  style="max-width: 1500px">
-      <aside id="finder_bar" class="md:sticky p-4 mx-8 my-4 bg-blue-dark rounded-md" style="height: fit-content; top: 25px; min-width: 220px;">
-        <span class="text-white-light font-bold text-xl ml-2 mb-4 inline-block">Find a Survivor</span>
-        <div class="border-b-2 m-2" style="color: #ffffff">
-          <div id="survivor_finder_hide" class="flex justify-between cursor-pointer text-white-light form-hider m-1 text-lg uppercase font-bold"><div class="pointer-events-none">Season</div><i class="fas fa-angle-down mt-1 pointer-events-none"></i></div>
-          <form id="survivor_finder" class="hidden cursor-pointer mx-2 my-4" style="color: #BDBDBD">
-            <select name="season" id="season_sort" class="p-2 font-bold rounded-lg" style="width: 150px">
-              <option value="" disabled selected>Season</option>
-              <option value="0">All Seasons</option>
-              <option value="1">Borneo</option>
-              <option value="2">Australia</option>
-              <option value="3">Africa</option>
-              <option value="4">Marquesas</option>
-              <option value="5">Thailand</option>
-              <option value="6">Amazon</option>
-              <option value="7">Pearl Islands</option>
-              <option value="8">All-Stars</option>
-              <option value="9">Vanuatu</option>
-              <option value="10">Palau</option>
-              <option value="11">Gautemala</option>
-              <option value="12">Panama</option>
-              <option value="13">Cook Islands</option>
-              <option value="14">Fiji</option>
-              <option value="15">China</option>
-              <option value="16">Micronesia</option>
-              <option value="17">Gabon</option>
-              <option value="18">Tocantins</option>
-              <option value="19">Samoa</option>
-              <option value="20">Heroes v Villians</option>
-              <option value="21">Nicaragua</option>
-              <option value="22">Redemption Island</option>
-              <option value="23">South Pacific</option>
-              <option value="24">One World</option>
-              <option value="25">Philippines</option>
-              <option value="26">Caramoan</option>
-              <option value="27">Blood v Water</option>
-              <option value="28">Cagayan</option>
-              <option value="29">San Juan del Sur</option>
-              <option value="30">Worlds Apart</option>
-              <option value="31">Cambodia</option>
-              <option value="32">Kaôh Rōng</option>
-              <option value="33">Millenials v Gen X</option>
-              <option value="34">Game Changers</option>
-              <option value="35">Hero/Vill/Hust</option>
-              <option value="36">Ghost Island</option>
-              <option value="37">David v Goliath</option>
-              <option value="38">Edge of Extinction</option>
-              <option value="39">Island of Idols</option>
-              <option value="40">Winners at War</option>
+    <section class="flex flex-col justify-center md:flex-row my-5 min-h-screen animate__animated animate__slideInLeft m-auto"  style="max-width: 1500px">
+      <aside class="md:sticky mx-auto md:mx-4" style="height: fit-content; top: 25px;">
+        <div id="finder_bar" class="p-4 mx-4 md:mx-0 my-4 bg-blue-dark rounded-md" style="height: fit-content; top: 25px; min-width: 220px; box-shadow: 1px 1px 10px #d3d3d3; ">
+          <span class="text-white-light font-bold text-xl ml-2 mb-4 inline-block">Find a Survivor</span>
+          <div class="border-b-2 m-2" style="color: #ffffff">
+            <div id="survivor_finder_hide" class="flex justify-between cursor-pointer text-white-light form-hider m-1 text-lg uppercase font-bold"><div class="pointer-events-none">Season</div><i class="fas fa-angle-down mt-1 pointer-events-none"></i></div>
+            <form id="survivor_finder" class="hidden cursor-pointer my-4" style="color: #BDBDBD">
+              <select name="season" id="season_sort" class="p-2 font-bold rounded-lg" style="width: 150px">
+                <option value="" disabled>Season</option>
+                <option value="0">All Seasons</option>
+                <option value="1"  selected>Borneo</option>
+                <option value="2">Australia</option>
+                <option value="3">Africa</option>
+                <option value="4">Marquesas</option>
+                <option value="5">Thailand</option>
+                <option value="6">Amazon</option>
+                <option value="7">Pearl Islands</option>
+                <option value="8">All-Stars</option>
+                <option value="9">Vanuatu</option>
+                <option value="10">Palau</option>
+                <option value="11">Gautemala</option>
+                <option value="12">Panama</option>
+                <option value="13">Cook Islands</option>
+                <option value="14">Fiji</option>
+                <option value="15">China</option>
+                <option value="16">Micronesia</option>
+                <option value="17">Gabon</option>
+                <option value="18">Tocantins</option>
+                <option value="19">Samoa</option>
+                <option value="20">Heroes v Villians</option>
+                <option value="21">Nicaragua</option>
+                <option value="22">Redemption Island</option>
+                <option value="23">South Pacific</option>
+                <option value="24">One World</option>
+                <option value="25">Philippines</option>
+                <option value="26">Caramoan</option>
+                <option value="27">Blood v Water</option>
+                <option value="28">Cagayan</option>
+                <option value="29">San Juan del Sur</option>
+                <option value="30">Worlds Apart</option>
+                <option value="31">Cambodia</option>
+                <option value="32">Kaôh Rōng</option>
+                <option value="33">Millenials v Gen X</option>
+                <option value="34">Game Changers</option>
+                <option value="35">Hero/Vill/Hust</option>
+                <option value="36">Ghost Island</option>
+                <option value="37">David v Goliath</option>
+                <option value="38">Edge of Extinction</option>
+                <option value="39">Island of Idols</option>
+                <option value="40">Winners at War</option>
+              </select>
+            </form>
+          </div>
+          <div class="border-b-2 m-2 text-white-light">
+            <div id="survivor_finder_hide" class="flex justify-between cursor-pointer text-white-light form-hider m-1 text-lg uppercase font-bold"><div class="pointer-events-none">Type</div><i class="fas fa-angle-down mt-1 pointer-events-none"></i></div>
+            <select name="style" id="survivor_style" class="hidden cursor-pointer  my-4 p-2 font-bold rounded-lg" style="width: 150px; color: #BDBDBD">
+              <option value="" disabled>Type</option>
+              <option value="All_Types"  selected>All Types</option>
+              <option value="Antagonistic">Antagonistic</option>
+              <option value="Athletic">Athletic</option>
+              <option value="Chaotic">Chaotic</option>
+              <option value="Charismatic">Charismatic</option>
+              <option value="Goat">Goat</option>
+              <option value="Strategic">Strategic</option>
             </select>
-          </form>
+          </div>
+          <div class="border-b-2 m-2 text-white-light">
+            <div id="survivor_finder_hide" class="flex justify-between cursor-pointer text-white-light form-hider m-1 text-lg uppercase font-bold"><div class="pointer-events-none">Score</div><i class="fas fa-angle-down mt-1 pointer-events-none"></i></div>
+            <form id="survivor_score" class="hidden cursor-pointer my-4" style="width: 150px;">
+              <input type="text" id="minScore" name="fname" placeholder="0" value="" style="width: 70px; color: #BDBDBD" class="mb-1 p-2 font-bold rounded-lg">
+              <input type="text" id="maxScore" name="lname" placeholder="100" value="" style="width: 70px; color: #BDBDBD" class="p-2 font-bold rounded-lg">
+            </form>
+          </div>
+          <div class="border-b-2 m-2 text-white-light">
+            <div id="survivor_sort_hide" class="flex justify-between cursor-pointer text-white-light form-hider m-1 text-lg uppercase font-bold"><div class="pointer-events-none">Sort</div><i class="fas fa-angle-down mt-1 pointer-events-none"></i></div>
+            <form id="survivor_sort" class="hidden cursor-pointer my-4 font-bold">
+              <input type="radio" id="name" name="sort" value="name">
+              <label for="name">Name</label><br>
+              <input type="radio" id="place" name="sort" value="place">
+              <label for="place">Place Finished</label><br>
+              <input type="radio" id="season" name="sort" value="season">
+              <label for="season">Season Name</label><br>
+              <input type="radio" id="season_num" name="sort" value="season_num">
+              <label for="season_num">Season Number</label><br>
+              <input type="radio" id="survivor_score-sort" name="sort" value="survivor_score">
+              <label for="survivor_score-sort">Survivor Score</label><br>
+            </form>
+          </div>
         </div>
-        <div class="border-b-2 m-2 text-white-light">
-          <div id="survivor_finder_hide" class="flex justify-between cursor-pointer text-white-light form-hider m-1 text-lg uppercase font-bold"><div class="pointer-events-none">Type</div><i class="fas fa-angle-down mt-1 pointer-events-none"></i></div>
-          <select name="style" id="survivor_style" class="hidden cursor-pointer mx-2 my-4 p-2 font-bold rounded-lg" style="width: 150px; color: #BDBDBD">
-            <option value="" disabled selected>Type</option>
-            <option value="All_Types">All Types</option>
-            <option value="Antagonistic">Antagonistic</option>
-            <option value="Athletic">Athletic</option>
-            <option value="Chaotic">Chaotic</option>
-            <option value="Charismatic">Charismatic</option>
-            <option value="Goat">Goat</option>
-            <option value="Strategic">Strategic</option>
-          </select>
-        </div>
-        <div class="border-b-2 m-2 text-white-light">
-          <div id="survivor_finder_hide" class="flex justify-between cursor-pointer text-white-light form-hider m-1 text-lg uppercase font-bold"><div class="pointer-events-none">Score</div><i class="fas fa-angle-down mt-1 pointer-events-none"></i></div>
-          <form id="survivor_score" class="hidden cursor-pointer mx-2 my-4" style="width: 150px;">
-            <input type="text" id="minScore" name="fname" placeholder="min" value="" style="width: 70px;" class="mb-1 p-2 font-bold rounded-lg" style="color: #BDBDBD">
-            <input type="text" id="maxScore" name="lname" placeholder="max" value="" style="width: 70px;" class="p-2 font-bold rounded-lg" style="color: #BDBDBD">
-          </form>
-        </div>
-        <div class="border-b-2 m-2 text-white-light">
-          <div id="survivor_sort_hide" class="flex justify-between cursor-pointer text-white-light form-hider m-1 text-lg uppercase font-bold"><div class="pointer-events-none">Sort</div><i class="fas fa-angle-down mt-1 pointer-events-none"></i></div>
-          <form id="survivor_sort" class="hidden cursor-pointer mx-2 my-4 font-bold">
-            <input type="radio" id="name" name="sort" value="name">
-            <label for="name">Name</label><br>
-            <input type="radio" id="place" name="sort" value="place">
-            <label for="place">Place Finished</label><br>
-            <input type="radio" id="season" name="sort" value="season">
-            <label for="season">Season Name</label><br>
-            <input type="radio" id="season_num" name="sort" value="season_num">
-            <label for="season_num">Season Number</label><br>
-            <input type="radio" id="survivor_score-sort" name="sort" value="survivor_score">
-            <label for="survivor_score-sort">Survivor Score</label><br>
-          </form>
+        <div class="mx-4 md:mx-0" style="box-shadow: 1px 1px 10px #d3d3d3;">
+          <div id="tribesMenu" class="flex flex-col mt-4 rounded-md">
+            <div class="flex">
+              <div id="homeTribeTab" class="text-white-light font-bold text-lg text-center p-1 pb-2 bg-green-light w-1/2 rounded-tl-md cursor-pointer">KOROR</div>
+              <div id="awayTribeTab" class="text-white-light font-bold text-lg text-center p-1 pb-2 bg-green-dark w-1/2 rounded-tr-md ml-auto cursor-pointer" style="box-shadow: inset 5px 0 5px -6px #000, inset 0px -9px 5px -9px #000;">BALBOA</div>
+            </div>
+            <div id="homeTribeBar" class="text-white-light font-bold text-xl bg-green-light relative rounded-b-md pt-4 px-6" style="bottom: 1px;">
+              <div>
+                <div class="flex justify-between text-lg my-2 p-2 bg-white-light rounded-md mb-2"  style="box-shadow: inset 0px 8px 15px rgba(0, 0, 0, 0.2); height: 42px;">
+                </div>
+                <div class="flex justify-between text-lg my-2 p-2 bg-white-light rounded-md mb-2"  style="box-shadow: inset 0px 8px 15px rgba(0, 0, 0, 0.2); height: 42px;">
+                </div>
+                <div class="flex justify-between text-lg my-2 p-2 bg-white-light rounded-md mb-2"  style="box-shadow: inset 0px 8px 15px rgba(0, 0, 0, 0.2); height: 42px;">
+                </div>
+                <div class="flex justify-between text-lg my-2 p-2 bg-white-light rounded-md mb-2"  style="box-shadow: inset 0px 8px 15px rgba(0, 0, 0, 0.2); height: 42px;">
+                </div>
+                <div class="flex justify-between text-lg my-2 p-2 bg-white-light rounded-md mb-2"  style="box-shadow: inset 0px 8px 15px rgba(0, 0, 0, 0.2); height: 42px;">
+                </div>
+                <div class="flex justify-between text-lg my-2 p-2 bg-white-light rounded-md mb-2"  style="box-shadow: inset 0px 8px 15px rgba(0, 0, 0, 0.2); height: 42px;">
+                </div>
+                <div class="m-auto pb-4" style="font-size: 8px; width: fit-content">
+                  <i class="far fa-circle pr-1 text-xs text-blue-light"></i>
+                  <i class="far fa-circle pr-1 text-xs text-blue-light"></i>
+                  <i class="far fa-circle pr-1 text-xs text-blue-light"></i>
+                  <i class="far fa-circle pr-1 text-xs text-blue-light"></i>
+                  <i class="far fa-circle pr-1 text-xs text-blue-light"></i>
+                  <i class="far fa-circle pr-1 text-xs text-blue-light"></i>
+                </div>
+              </div>
+              <div class="m-auto pb-2" style="font-size: 8px; width: fit-content">
+                <i class="fas fa-angle-up text-2xl"></i>
+              </div>
+            </div>
+            <div id="awayTribeBar" class="text-white-light font-bold text-xl bg-green-dark relative rounded-b-md pt-4 px-6 hidden" style="bottom: 1px;">
+              <div>
+                <div class="flex justify-between text-lg my-2 p-2 bg-white-light rounded-md mb-2"  style="box-shadow: inset 0px 8px 15px rgba(0, 0, 0, 0.2); height: 42px;">
+                </div>
+                <div class="flex justify-between text-lg my-2 p-2 bg-white-light rounded-md mb-2"  style="box-shadow: inset 0px 8px 15px rgba(0, 0, 0, 0.2); height: 42px;">
+                </div>
+                <div class="flex justify-between text-lg my-2 p-2 bg-white-light rounded-md mb-2"  style="box-shadow: inset 0px 8px 15px rgba(0, 0, 0, 0.2); height: 42px;">
+                </div>
+                <div class="flex justify-between text-lg my-2 p-2 bg-white-light rounded-md mb-2"  style="box-shadow: inset 0px 8px 15px rgba(0, 0, 0, 0.2); height: 42px;">
+                </div>
+                <div class="flex justify-between text-lg my-2 p-2 bg-white-light rounded-md mb-2"  style="box-shadow: inset 0px 8px 15px rgba(0, 0, 0, 0.2); height: 42px;">
+                </div>
+                <div class="flex justify-between text-lg my-2 p-2 bg-white-light rounded-md mb-2"  style="box-shadow: inset 0px 8px 15px rgba(0, 0, 0, 0.2); height: 42px;">
+                </div>
+                <div class="m-auto pb-4" style="font-size: 8px; width: fit-content">
+                  <i class="far fa-circle pr-1 text-xs text-blue-light"></i>
+                  <i class="far fa-circle pr-1 text-xs text-blue-light"></i>
+                  <i class="far fa-circle pr-1 text-xs text-blue-light"></i>
+                  <i class="far fa-circle pr-1 text-xs text-blue-light"></i>
+                  <i class="far fa-circle pr-1 text-xs text-blue-light"></i>
+                  <i class="far fa-circle pr-1 text-xs text-blue-light"></i>
+                </div>
+              </div>
+              <div class="m-auto pb-2" style="font-size: 8px; width: fit-content">
+                <i class="fas fa-angle-up text-2xl"></i>
+              </div>
+            </div>
+          </div>
+          </div>
+
         </div>
       </aside>
-      <div id="survivor_cards" class="flex flex-col md:flex-row w-auto flex-wrap justify-center py-2 items-center bg-white-dark bg-no-repeat" style="max-width: 1000px;"></div>
+      <div id="survivor_cards" class="flex flex-col md:flex-row w-auto flex-wrap justify-center py-2 items-center bg-white-dark bg-no-repeat" style="max-width: 1000px; height: fit-content;"></div>
     </section>
   </main>
   <footer class="flex flex-col md:flex-row bg-green-dark w-screen content-end justify-between" style="height: 500px;">
