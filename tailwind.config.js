@@ -25,6 +25,10 @@ module.exports = {
       green: {
         dark: '#009C91',
         light: '#339496',
+      },
+      red: {
+        dark: '#ff3d3d',
+        light: '#ffc5c5',
       }
     },
     fontSize: {
@@ -42,12 +46,15 @@ module.exports = {
         '7xl': ['7rem', {lineHeight: '7.5rem'}],
         '8xl': ['8rem', {lineHeight: '8.5rem'}],
         '9xl': ['9rem', {lineHeight: '9.5rem'}]
-            }
+            },
+      extend: {
+        lineHeight: {
+          'huge': '4.25rem'
+          }
+      },
   },
   variants: {
-    extend: {
-      
-    },
+    extend: {}
   },
   plugins: [],
 }

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+  <script defer src="./src/play.js"></script>
+  <script defer src="./src/index.js"></script>
+  <title>Survivor's Ready?</title>
+</head>
+  <body class="bg-white-dark overflow-x-hidden relative h-full w-full">
+    <header class="h-32 md:h-36">
+      <div id="nav-items" class="animate__animated animate__slideInDown z-20 z-10 p-10 md:p-6 flex absolute justify-between w-screen">
+        <!-- <i href="/" class="fab fa-accusoft"></i> -->
+        <a href="/"><img id="logo" src="/images/Survivor Fantasy Island Lock Ups_2.png" class="h-14 sm:h-20 2xl:h-24" /></a>
+        <i id="nav_button" class="fas fa-bars text-green-dark text-3xl md:text-4xl md:pt-4"></i>
+      </div>
+      <nav id="flyout-nav" class="bg-blue-light hidden-right z-10 fixed md:relative flex top-0 w-full md:w-1/2 ml-auto h-screen bg-white-light items-center justify-center">
+        <ul>
+          <li class="p-8 font-bold text-3xl text-orange-dark hidden md:block"><a href="/"><a href="/">Home</a></li>
+          <li class="p-8 font-bold text-3xl text-orange-dark"><a href="/"><a href="/">Play Survivor</a></li>
+          <li class="p-8 font-bold text-3xl text-orange-dark"><a href="/survivors.html">Contestants</a></li>
+          <li class="p-8 font-bold text-3xl text-orange-dark"><a href="/">Profile</a></li>
+          <li class="p-8 font-bold text-3xl text-orange-dark"><a href="/">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="mb-12">
+      <section id="dayContainer" class="h-auto w-screen px-4 m-auto" style="max-width: 2000px">
+        <div class="singleDay">
+          <div class="dayHeader">DAY 1</div>
+          <div class="dayHeader pt-20">FANTASY</div>
+          <div class="dayHeader pt-10">ISLAND</div>
+          <div class="dayDescription">Welcome to Survivor Fantasy Island. This is sure to be one of the best seasons of Surivor yet. You're all here with the sole purpose of winning the million dollars. Who will Outlast, Outwit, and Outplay all the others!</div>
+        </div>
+      </section>
+      <section class="h-auto w-screen py-12 m-auto flex justify-center" style="max-width: 1200px">
+        <a id="dayLink" href="/play.html#day_1"><button id="continueButton" class="p-4 bg-orange-dark rounded-md font-bold text-white-light">CONTINUE</button></a>
+      </section>
+      <section class="h-auto w-screen px-4 m-auto" style="max-width: 1200px">
+        <div id="tribesContainer">
+        </div>
+      </section>
+    </main>
+    <footer class="flex flex-col md:flex-row bg-green-dark w-screen content-end justify-between" style="height: 500px;">
+      <div class="rounded-tr-3xl bg-blue-light flex flex-col w-0 md:h-44 md:w-80 self-end justify-around items-center">
+        <a href="/"><img src="/images/Survivor Fantasy Island Lock Ups_3.png" class="py-1 h-10 sm:h-32 2xl:h-24" /></a>
+      </div>
+      <div class="flex flex-col justify-center items-start pl-10 pb-10 md:pd-0 md:w-1/2">
+        <ul>
+          <li class="font-bold pb-4 hover:text-green-dark cursor-pointer">HOME</li>
+          <li class="font-bold pb-4 hover:text-green-dark cursor-pointer"><a href="/survivors.html">SURVIVORS</a></li>
+          <li class="font-bold pb-4 hover:text-green-dark cursor-pointer">LOGIN</li>
+          <li class="font-bold pb-4 hover:text-green-dark cursor-pointer">CREATE ACCOUNT</li>
+          <li class="font-bold pb-6 hover:text-green-dark cursor-pointer">GAME HISTORY</li>
+        </ul>
+        <div>
+          <span class="hover:text-green-dark cursor-pointer">Hire Me.</span>
+        </div>
+        <div class="py-4">
+          <i class="text-3xl pr-4 fas fa-envelope hover:text-green-dark cursor-pointer"></i>
+          <i class="text-3xl pr-4 fab fa-github hover:text-green-dark cursor-pointer"></i>
+          <i class="text-3xl fab fa-linkedin-in hover:text-green-dark cursor-pointer"></i>
+        </div>
+        <div>
+          <span>© 2021 WildPineapple | Website by me</span>
+        </div>
+      </div>
+    </footer>
+  </body> 
+</html>

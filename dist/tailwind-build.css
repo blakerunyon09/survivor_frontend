@@ -17,6 +17,10 @@ aside::-moz-selection {
   background: #00000000;
 }
 
+.play-btn {
+    @apply bg-orange-dark text-base font-bold h-12 w-24 rounded leading-tight text-white-light font-bold mt-4
+}
+
 footer {
   background: url('/images/Palm Graphic Repeatable_palm.svg');
   background-size: 140%;
@@ -151,6 +155,53 @@ footer {
 
 .btn {
   @apply bg-green-dark text-sm mt-auto h-6 w-12 rounded leading-tight text-white-light font-bold
+}
+
+/* PLAY TRIBES STYLES */
+
+.singleDay {
+  @apply flex flex-row flex-wrap justify-around md:w-8/12 mx-auto pt-12
+}
+
+.dayHeader {
+  @apply text-green-light text-xl sm:text-3xl lg:text-4xl 2xl:text-4xl font-bold whitespace-nowrap
+}
+
+.dayDescription {
+  flex: 0 0 100%;
+  @apply font-normal text-green-light text-xl md:text-2xl md:leading-huge pt-24 pb-32 tracking-wider leading-loose
+}
+
+#tribesContainer {
+  @apply flex flex-col lg:flex-row justify-around w-8/12 mx-auto py-12
+}
+
+.tribeName {
+  @apply text-green-light text-center text-xl sm:text-3xl lg:text-4xl 2xl:text-4xl font-bold pb-4
+}
+
+.survCard {
+  @apply flex flex-row border-4 rounded-md p-2 my-2 text-white-light
+}
+
+.survCard img {
+  @apply h-14 w-14 mr-2 bg-brown rounded-md
+}
+
+.survCard .bigText {
+  @apply font-bold text-xl
+}
+
+.survCard .smallText {
+  @apply font-light text-base
+}
+
+.color-gb {
+  @apply border-green-dark bg-blue-dark 
+}
+
+.color-gr {
+  @apply border-green-dark bg-red-dark text-white-light
 }
 
 /* TAILWIND STYLES */

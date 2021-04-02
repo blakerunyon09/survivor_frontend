@@ -74,18 +74,29 @@ const addSurvivorToTribe = (survivor, survivorCard) => {
 
 // ADD SURVIVOR TO AWAY TRIBE
 const addAwaySurvivor = () => {
-  let awaySurv = (Math.floor(Math.random() * idRange.length) + idRange.minID)
-  fetch(`${survivorsAPI}?id=${awaySurv}`)
+  let awaySurv = findUniqueSurvivor()
+
+    fetch(`${survivorsAPI}?id=${awaySurv}`)
     .then(res => res.json())
     .then(survivor => {
       tribesArray[1].push({id: survivor[0].id, name: survivor[0].name})
-      let setCookie = JSON.stringify(tribesArray)
-      document.cookie = `tribes=${setCookie}`
       updateTribesBar()
     })
 
   const survivorToRemoveID = document.querySelector(`#surv_${awaySurv}`)
   survivorToRemoveID.remove()
+}
+
+// FIND UNIQUE SURVIVOR
+const findUniqueSurvivor = () => {
+  let uniqueSurv = (Math.floor(Math.random() * idRange.length) + idRange.minID)
+  uniqueCheck = tribesArray[0].some(survivor => survivor.id === uniqueSurv) || tribesArray[1].some(survivor => survivor.id === uniqueSurv) 
+  
+  if(!uniqueCheck){
+    return uniqueSurv
+  }else{
+    return findUniqueSurvivor()
+  }
 }
 
 // 
@@ -157,10 +168,11 @@ const createTribeListItem = () => {
   }
 
   if(tribesArray[0][5]){
-    const tribeMenu = document.querySelector('aside')
-    button = createNode('button', 'btn')
-    button.innerHTML = '<a href="/play">Play</a>'
-    tribeMenu.append(button)
+    const playButtonContainer = document.querySelector('#playButtonContainer')
+    button = createNode('button', 'play-btn')
+    button.innerHTML = '<a href="/play.html">Play</a>'
+    localStorage.setItem('tribes', `${tribesArray[0][0].id},${tribesArray[0][1].id},${tribesArray[0][2].id},${tribesArray[0][3].id},${tribesArray[0][4].id},${tribesArray[0][5].id},${tribesArray[1][0].id},${tribesArray[1][1].id},${tribesArray[1][2].id},${tribesArray[1][3].id},${tribesArray[1][4].id},${tribesArray[1][5].id}`) 
+    playButtonContainer.append(button)
   }
 }
 
